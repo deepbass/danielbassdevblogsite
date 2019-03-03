@@ -38,11 +38,13 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+              Written by <strong>{author}</strong>, the author of 
+              'Beginning Serverless Architectures with Microsoft Azure' 
+              and 'Advanced Serverless Architectures with Microsoft Azure'
               {` `}
+              <br/>
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                Follow me on Twitter
               </a>
             </p>
           </div>

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Serverless Development`,
+    author: `Daniel Bass`,
+    description: `Blog on development from the author of 'Beginning Serverless Architectures with Microsoft Azure' and 'Advanced Serverless Architectures with Microsoft Azure`,
+    siteUrl: `https://danielbass.dev`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `danbassdev`,
     },
   },
   plugins: [
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Daniel Bass's Blog`,
+        short_name: `DanBassDev`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

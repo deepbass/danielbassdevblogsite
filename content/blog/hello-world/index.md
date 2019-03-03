@@ -1,21 +1,9 @@
 ---
 title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+date: "2019-03-03T22:12:03.284Z"
+description:  I saw the .dev domains go on sale and immediately had to buy one! I'm not sure what
 ---
 
-This is my first post on my new fake blog! How exciting!
+I saw the .dev domains go on sale and immediately had to buy one. I've not decided yet what I'm going to put on here, but I'm enjoying experimenting with GatsbyJS - and therefore React. I'm hosting it serverlessly on Azure Storage Static Site Hosting and deploying it using Azure DevOps, which I'll do a blog post on soon.
 
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
-
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](./salty_egg.jpg)
+In general I think I will cover serverless development, and possibly some DevOps and MLOps. It will be focused on Microsoft Azure, as that's the cloud provider I'm familiar with. I'm also passionate about the FIRE (Financial Independence Retire Early) movement so I will possibly post about that too. 

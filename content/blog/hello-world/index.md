@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2019-03-03T22:12:03.284Z"
-description:  I saw the .dev domains go on sale and immediately had to buy one! I'm not sure what
+description:  I saw the .dev domains go on sale and immediately had to buy one! 
 ---
 
 I saw the .dev domains go on sale and immediately had to buy one. I've not decided yet what I'm going to put on here, but I'm enjoying experimenting with GatsbyJS - and therefore React. I'm hosting it serverlessly on Azure Storage Static Site Hosting and deploying it using Azure DevOps, which I'll do a blog post on soon.

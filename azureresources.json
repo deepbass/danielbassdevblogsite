@@ -27,9 +27,9 @@
       }
     ],
     "outputs": {
-      "storageAccountName": {
+      "storageAccountKey": {
         "type": "string",
-        "value": "[parameters('name')]"
+        "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('name')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value]"
       }
     }
   }

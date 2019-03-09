@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Serverless Development`,
+    title: `Daniel Bass`,
     author: `Daniel Bass`,
     description: `Blog on development from the author of 'Beginning Serverless Architectures with Microsoft Azure' and 'Advanced Serverless Architectures with Microsoft Azure`,
-    siteUrl: `https://danielbass.dev`,
+    siteUrl: `https://www.danielbass.dev`,
     social: {
       twitter: `danbassdev`,
     },

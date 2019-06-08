@@ -2,39 +2,17 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "name": {
-            "type": "string"
-        },
-        "cdn_profile_name": {
-          "type": "string"
-      },
-      "custom_hostname": {
-        "type": "string"
-    },
-      "location": {
-        "type": "string",
-        "defaultValue": "[resourceGroup().location]",
-        "metadata": {
-          "description": "Location for all resources."
+        "profiles_danbasscdnprofile_name": {
+            "defaultValue": "danbasscdnprofile",
+            "type": "String"
         }
-      }
     },
+    "variables": {},
     "resources": [
-      {
-        "type": "Microsoft.Storage/storageAccounts",
-        "name": "[parameters('name')]",
-        "location": "[parameters('location')]",
-        "apiVersion": "2018-07-01",
-        "sku": {
-          "name": "Standard_GRS"
-        },
-        "kind": "StorageV2",
-        "properties": {}
-      },
         {
             "type": "Microsoft.Cdn/profiles",
             "apiVersion": "2016-04-02",
-            "name": "[parameters('cdn_profile_name')]",
+            "name": "[parameters('profiles_danbasscdnprofile_name')]",
             "location": "WestUs",
             "sku": {
                 "name": "Standard_Akamai"
@@ -47,10 +25,10 @@
         {
             "type": "Microsoft.Cdn/profiles/endpoints",
             "apiVersion": "2016-04-02",
-            "name": "[concat(parameters('cdn_profile_name'), '/dbdev')]",
+            "name": "[concat(parameters('profiles_danbasscdnprofile_name'), '/dbdev')]",
             "location": "WestUs",
             "dependsOn": [
-                "[resourceId('Microsoft.Cdn/profiles', parameters('cdn_profile_name'))]"
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_danbasscdnprofile_name'))]"
             ],
             "properties": {
                 "originHostHeader": "danielbassdevblogprd.z33.web.core.windows.net",
@@ -83,22 +61,22 @@
         {
             "type": "Microsoft.Cdn/profiles/endpoints/customdomains",
             "apiVersion": "2016-04-02",
-            "name": "[concat(parameters('cdn_profile_name'), '/dbdev/www-danielbass-dev')]",
+            "name": "[concat(parameters('profiles_danbasscdnprofile_name'), '/dbdev/www-danielbass-dev')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Cdn/profiles/endpoints', parameters('cdn_profile_name'), 'dbdev')]",
-                "[resourceId('Microsoft.Cdn/profiles', parameters('cdn_profile_name'))]"
+                "[resourceId('Microsoft.Cdn/profiles/endpoints', parameters('profiles_danbasscdnprofile_name'), 'dbdev')]",
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_danbasscdnprofile_name'))]"
             ],
             "properties": {
-                "hostName": "[parameters('custom_hostname')]"
+                "hostName": "www.danielbass.dev"
             }
         },
         {
             "type": "Microsoft.Cdn/profiles/endpoints/origins",
             "apiVersion": "2016-04-02",
-            "name": "[concat(parameters('cdn_profile_name'), '/dbdev/danielbassdevblogprd-blob-core-windows-net')]",
+            "name": "[concat(parameters('profiles_danbasscdnprofile_name'), '/dbdev/danielbassdevblogprd-blob-core-windows-net')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Cdn/profiles/endpoints', parameters('cdn_profile_name'), 'dbdev')]",
-                "[resourceId('Microsoft.Cdn/profiles', parameters('cdn_profile_name'))]"
+                "[resourceId('Microsoft.Cdn/profiles/endpoints', parameters('profiles_danbasscdnprofile_name'), 'dbdev')]",
+                "[resourceId('Microsoft.Cdn/profiles', parameters('profiles_danbasscdnprofile_name'))]"
             ],
             "properties": {
                 "hostName": "danielbassdevblogprd.z33.web.core.windows.net",
@@ -106,11 +84,5 @@
                 "httpsPort": 443
             }
         }
-    ],
-    "outputs": {
-      "storageAccountKey": {
-        "type": "string",
-        "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('name')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value]"
-      }
-    }
-  }
+    ]
+}

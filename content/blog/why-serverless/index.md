@@ -25,3 +25,6 @@ I've called this a Serverless Architecture, but those of you with an in depth kn
 
 ## What can I, a developer, do with this knowledge
 Firstly, approach your current and future work with a Serverless mindset. Even if you don't have the power to move to use some of the tools detailed here, simply considering the focus and TCO aspects of an architecture decision will benefit you greatly. Secondly, get comfortable with Infrastructure. Infrastructure components like queues, databases, caches etc are now much more important to know about and understand to deliver your application. If you aren't using Infrastructure as Code already I would strongly strongly suggest it. Finally I'd consider rewriting the architectures of some Apss you have built already into a more Serverless form and compare their TCO - particularly around scalability.
+
+## So what is Serverless then? 
+Again, it depends. But I often sum it up like this. Serverless is any service where I can just focus on the problem I'm trying to solve and send my code to the provider and let them care about every aspect of making that code available.

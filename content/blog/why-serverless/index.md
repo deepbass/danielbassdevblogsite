@@ -1,7 +1,7 @@
 ---
 title: What is Serverless?
 date: "2019-11-12T09:00:00.000Z"
-description: What is Serverless and why you should use Serverless Architecture
+description: What is Serverless and why you should use a Serverless Mindset
 ---
 I've been writing for a little while about Serverless technology and evangelizing about it both at work and elsewhere. But the most common question I get asked is still "What is Serverless?" (Which is generally silently followed with "and why should I care"). 
 This is a totally valid question, and generally the answer I give depends heavily on the audience. This is because people are generally looking for a one-liner to go away with, not an indepth evaluation of the framework used to evaluate how 'Serverless' something is. This post is my long answer that I wish I could give without boring people to death! 
@@ -25,3 +25,8 @@ I've called this a Serverless Architecture, but those of you with an in depth kn
 
 ## What can I, a developer, do with this knowledge
 Firstly, approach your current and future work with a Serverless mindset. Even if you don't have the power to move to use some of the tools detailed here, simply considering the focus and TCO aspects of an architecture decision will benefit you greatly. Secondly, get comfortable with Infrastructure. Infrastructure components like queues, databases, caches etc are now much more important to know about and understand to deliver your application. If you aren't using Infrastructure as Code already I would strongly strongly suggest it. Finally I'd consider rewriting the architectures of some Apss you have built already into a more Serverless form and compare their TCO - particularly around scalability.
+
+## So what is Serverless then? 
+Again, it depends. But I often sum it up like this. Serverless is any service where I can just focus on the problem I'm trying to solve and send my code to the provider and let them care about every aspect of making that code available. This covers things like Function-as-a-Service (Azure Functions or AWS Lambda) or Static Site Hosting (Azure Storage or S3). It doesn't quite capture the nuances of TCO, but realistically getting into that debate is how I send people to sleep - which you've managed not to do if you've kept  reading this far. 
+
+I hope you've enjoyed this, please feel free to get in touch on twitter or LinkedIn

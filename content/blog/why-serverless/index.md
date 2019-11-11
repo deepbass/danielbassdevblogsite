@@ -1,7 +1,7 @@
 ---
 title: What is Serverless?
 date: "2019-11-12T09:00:00.000Z"
-description: What is Serverless and why you should use Serverless Architecture
+description: What is Serverless and why you should use a Serverless Mindset
 ---
 I've been writing for a little while about Serverless technology and evangelizing about it both at work and elsewhere. But the most common question I get asked is still "What is Serverless?" (Which is generally silently followed with "and why should I care"). 
 This is a totally valid question, and generally the answer I give depends heavily on the audience. This is because people are generally looking for a one-liner to go away with, not an indepth evaluation of the framework used to evaluate how 'Serverless' something is. This post is my long answer that I wish I could give without boring people to death! 

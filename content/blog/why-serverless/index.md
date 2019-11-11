@@ -28,3 +28,5 @@ Firstly, approach your current and future work with a Serverless mindset. Even i
 
 ## So what is Serverless then? 
 Again, it depends. But I often sum it up like this. Serverless is any service where I can just focus on the problem I'm trying to solve and send my code to the provider and let them care about every aspect of making that code available. This covers things like Function-as-a-Service (Azure Functions or AWS Lambda) or Static Site Hosting (Azure Storage or S3). It doesn't quite capture the nuances of TCO, but realistically getting into that debate is how I send people to sleep - which you've managed not to do if you've kept  reading this far. 
+
+I hope you've enjoyed this, please feel free to get in touch on twitter or LinkedIn
